@@ -1,0 +1,179 @@
+% ============================================================
+% 《哈尔滨理工大学学报》论文模板 —— 主文件
+% 编译方式：XeLaTeX（推荐），需安装 TeX Live / MiKTeX
+%   xelatex main.tex   （若含交叉引用，运行两次）
+% 字体依赖：宋体 SimSun、黑体 SimHei、楷体 KaiTi、
+%           仿宋 FangSong、Times New Roman（Windows 自带）
+% ============================================================
+\documentclass[UTF8]{hustjournal}
+
+% ---------------- 中文题名、作者、单位 ----------------
+\cnTitle{脑机接口}
+\cnAuthor{张某某$^{1}$，李\;某$^{2}$，王某某$^{3}$}
+\cnAffil{(1. 中国科学院电工研究所，北京 100190；2. 清华大学 电力系统国家重点实验室，北京 100084；%
+3. 哈尔滨理工大学 电气工程学院，黑龙江 哈尔滨 150080)}
+
+% ---------------- 中文摘要与关键词 ----------------
+\cnAbstract{摘要按报道性摘要撰写，给出目的、过程、结果和结论。针对研究问题，依据相关理论，采用相应方法，%
+研究了研究内容并给出了结果。结果表明：所得结论能够充分体现研究水平和层次，对重要指标给出了具体数据，%
+内容表达完整、充分，结构严谨、逻辑性强。字数一般要求在 250--300 汉字，以第三人称对文章内容进行准确而简要的概括。}
+\cnKeywords{格式规范；写作规范；出版物；编排；标准}
+
+% ---------------- 中图分类 / 文献标志码 / 文章编号 / DOI ----------------
+\doi{10.15938/j.jhust.2016.01.001}
+\clc{TB~114}
+\docCode{A}
+\articleID{1007-449X(2016)01-0000-00}
+
+% ---------------- 英文题名、作者、单位、摘要、关键词 ----------------
+\enTitle{The format criterion of paper of Harbin University of Science and Technology}
+\enAuthor{ZHANG Mou-mou$^{1}$, LI Mou$^{2}$, WANG Mou-mou$^{3}$}
+\enAffil{(1. Institute of Electrical Engineering, Chinese Academy of Sciences, Beijing 100190, China;%
+2. State Key Lab of Power Systems, Dept. of Electrical Engineering, Tsinghua University, Beijing 100084, China;%
+3. School of Electric and Engineering, Harbin University of Science and Technology, Harbin 150080, China)}
+
+\enAbstract{Contents of the abstract. The purpose, process, results and conclusions are given in a reporting style abstract.%
+The results show that the proposed method is effective and the conclusion is complete and sufficient.}
+\enKeywords{format criterion; writing criterion; publication; layout; standard}
+
+% ---------------- 收稿日期 / 基金项目 / 作者简介 / 通信作者 ----------------
+\received{2016--01--01}
+\foundation{国家自然科学基金（编号）；中国博士后科学基金（编号）}
+\authorBio{张某某（1979—），男，博士，研究方向为直线电机分析与控制；%
+李\;某（1972—），女，博士，副教授，研究方向为直线电机及其控制、电机优化设计。}
+\corresponding{张某某}
+
+% ---------------- 页眉与期刊卷期信息 ----------------
+\runningAuthor{张某某等}
+\runningTitle{哈尔滨理工大学学报论文格式规范}
+\journalVol{21}
+\journalIssue{1}
+\journalYear{2016}
+\journalMonth{2}
+\journalMonthEN{Feb.}
+
+\begin{document}
+
+% 题名区横跨双栏（否则正文双栏，题名区单栏）
+\twocolumn[\maketitle]
+
+% 说明：Word 规范中"从引言开始，是正文的起始页，从 0 开始标注序号"，
+% 即正文首页页码从 0 计。如需正文页码从 0 开始，可在引言前加：
+%   \setcounter{page}{0}
+% 本刊多数排版直接从 1 计页，故此处默认不重置。
+
+% ============================================================
+% 引言（无编号一级标题，黑体 小三 1.5 倍行距）
+% ============================================================
+\section{引\;言}
+用自己的语言描述目前该领域的发展状态，并标出参考文献，在正文中引用时用右上角标标出，%
+单独参考文献格式为~[1]，多个参考文献格式为~\upcite{1,2,3}。目前存在的问题和解决这些问题的意义。%
+本文的探讨范围和条件，采用的手段和方法，要达到的目的。文中第一次出现缩写的时候应加以说明，%
+如：开关磁阻电机（switched reluctance motor, SRM），以后出现时用 SRM 即可。引言中不能有图、表、公式。
+
+% ============================================================
+% 一级标题
+% ============================================================
+\section{正文格式说明}
+正文要求论点正确，推理严谨，数据可靠，文字精练，条理分明，文字图表清晰整齐。%
+正文选用模板中定义的``正文''样式，每段落首行缩进 2 字，字体宋体，字号五号，行距多倍行距 1.15，%
+间距段前、段后均为 0 行，取消网格对齐选项。
+
+\subsection{论文格式基本要求}
+\begin{itemize}
+  \item 纸\;型：A4 纸，双面打印。
+  \item 页边距：默认设置。
+  \item 页眉和页脚：默认设置，左侧装订。
+  \item 字\;体：正文全部宋体、五号。
+  \item 行\;距：多倍行距 1.15，段前、段后均为 0 行，取消网格对齐选项。
+\end{itemize}
+
+\subsection{正文中的编号}
+正文中的图、表、附注、公式一律采用阿拉伯数字编号，如图~1、表~2、式(1)等。%
+文中参考文献采用阿拉伯数字根据全文统一编号，在正文中引用时用右上角标标出，如文献~\upcite{1}。
+
+% ============================================================
+% 图（图题在图下，中文在上英文在下，黑体/ Times 小五 加粗 居中）
+% ============================================================
+\section{图的格式说明}
+图在正文中的格式示例如图~\ref{fig:sample} 所示。图居中排列，图与上文之间应留一空行。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\columnwidth]{example-image}
+  \caption{样式}
+  \figCaptionEN{Manner}
+  \label{fig:sample}
+\end{figure}
+
+% ============================================================
+% 表（三线表，表题在表上，中文在上英文在下）
+% ============================================================
+\section{表的格式说明}
+表在正文中的常用格式如表~\ref{tab:param} 所示。应先在正文中提到表，然后再放置表，不可颠倒。
+
+\begin{table}[H]
+  \centering
+  \caption{仿真模型的参数}
+  \tabCaptionEN{Parameters of simulation model}
+  \label{tab:param}
+  \begin{tabular}{lc}
+    \threeLineTableBegin
+    参数              & 数值       \\
+    \threeLineTableMid
+    直流电源 $V_{dc}$/V & 100        \\
+    直流电容 $C$/pF     & 0.12       \\
+    电阻 $R/\Omega$     & 0.09       \\
+    电感 $L$/H          & 0.0015     \\
+    开关频率 $f_s$/kHz  & $2\times10^{3}$ \\
+    功率 $P$/kW         & 14         \\
+    \threeLineTableEnd
+  \end{tabular}
+\end{table}
+
+% ============================================================
+% 公式（居中，编号右对齐，形如 (1-1)；独立公式后加标点）
+% ============================================================
+\section{公式的格式说明}
+由于研究对象复杂，定义公式形式为
+\begin{equation}
+  T_e = \frac{3}{2}p\left[\psi_f i_q + (L_d - L_q)i_d i_q\right].
+  \label{eq:te}
+\end{equation}
+式中：$T_e$ 为电磁转矩；$i_d$、$i_q$ 分别为 $d$、$q$ 轴电流；%
+$L_d$、$L_q$ 分别为 $d$、$q$ 轴电感；$\psi_f$ 为永磁体磁链；$p$ 为极对数。
+
+永磁同步电动机在 $d$-$q$ 旋转坐标系中的定子电压方程可表示为
+\begin{equation}
+  \begin{cases}
+    u_d = R_s i_d + \dfrac{\mathrm{d}\psi_d}{\mathrm{d}t} - \omega_e \psi_q,\\[4pt]
+    u_q = R_s i_q + \dfrac{\mathrm{d}\psi_q}{\mathrm{d}t} + \omega_e \psi_d.
+  \end{cases}
+  \label{eq:u}
+\end{equation}
+
+% ============================================================
+% 结论（无编号一级标题）
+% ============================================================
+\section{结\;论}
+本节给出详细结论，具有一定的深度，充分体现本文研究的水平。必要时给出条件和数据及优化方法，%
+真正构成结论性的语言，不再重复文章研究内容、过程。同时指出本文还存在的问题及可能原因，%
+以及结果在理论上的可拓展性与在实际应用中的可推广性。
+
+% ============================================================
+% 参考文献（GB/T 7714 顺序编码制）
+% ============================================================
+\begin{thebibliography}{99}
+\bibitem{1} 吴斌. 大功率变频器及交流传动[M]. 北京: 机械工业出版社, 2007: 11--12.
+\bibitem{2} JONES R M. Mechanics of Composite Materials[M]. New York: McGraw Hill Book Company, 1975.
+\bibitem{3} GANZHA V G, MAYR E W, VOROZHTSOV E V. Computer Algebra in Scientific Computing: CASC 2000[C]%
+//Proceedings of the Third Workshop on Computer Algebra in Scientific Computing. Berlin: Springer, 2000.
+\bibitem{4} 陈辰. 全空冷高压永磁同步电动机内流体与传热耦合场的计算与分析[D]. 哈尔滨: 哈尔滨理工大学, 2013.
+\bibitem{5} WANG Chunyong, Mooney W D, WANG Xili, et al. A Study on 3D Velocity Structure of Crust and Uppermantle%
+in Sichuan Yunnan Region[J]. Acta Seismologica Sinica, 2002, 15(1): 12.
+\bibitem{6} 付敏, 陈洋. U 型单相永磁同步电机振动及噪声的有限元分析[J]. 哈尔滨理工大学学报, 2015, 20(3): 86.
+FU Min, CHEN Yang. The Vibration and Noise Finite Element Analysis of U Type Single Phase Permanent Magnet%
+Synchronous Motor[J]. Journal of Harbin University of Science and Technology, 2015, 20(3): 86.
+\end{thebibliography}
+
+\end{document}
