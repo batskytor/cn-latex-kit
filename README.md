@@ -50,7 +50,7 @@ cnlatex doctor
 
 ## 快速开始
 
-### 场景 A：我有一個 Word 论文模板，想转成 LaTeX
+### 场景 A：我有一个 Word 论文模板，想转成 LaTeX
 
 ```bash
 cnlatex from-word "论文模板.docx" -o my-paper --journal-name "某某大学学报"
