@@ -35,7 +35,7 @@ D:\...\runscript.tlu:933: command failed with exit code 12:
 ## 安装
 
 ```bash
-git clone https://github.com/<你的用户名>/cn-latex-kit.git
+git clone https://github.com/batskytor/cn-latex-kit.git
 cd cn-latex-kit
 pip install -e .
 ```
